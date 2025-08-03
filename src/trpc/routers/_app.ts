@@ -5,7 +5,15 @@ export const appRouter = createTRPCRouter({
     invoke: baseProcedure
         .input(
             z.object({
+<<<<<<< HEAD
+<<<<<<< HEAD
+                value: z.string(),
+=======
                 text: z.string(),
+>>>>>>> 007b10a (04: Background Job)
+=======
+                value: z.string(),
+>>>>>>> f2bfb88 (05 AI Job)
             })
         )
         .mutation(async ({ input }) => {
@@ -13,7 +21,15 @@ export const appRouter = createTRPCRouter({
                 name: "test/hello.world"
                 ,
                 data: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    value: input.value
+=======
                     email: input.text
+>>>>>>> 007b10a (04: Background Job)
+=======
+                    value: input.value
+>>>>>>> f2bfb88 (05 AI Job)
                 }
             })
             return { ok: "success" }
